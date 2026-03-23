@@ -1,3 +1,3 @@
-output "vpc_id" {
+variable "vpc_id" {
   type = String
 }
