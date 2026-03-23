@@ -1,7 +1,7 @@
 variable "vpc_id" {
-  type = String
+  type = string
 }
 
 variable "subnet_cidr" {
-  type = String
+  type = string
 }
