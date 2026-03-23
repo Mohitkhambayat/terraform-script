@@ -1,5 +1,5 @@
 resource "aws_instance" "this" {
-  ami           = "ami-051f8b2110b52e9f0"
+  ami           = "ami-03caad32a158f72db"
   instance_type = var.instance_type
   
   tags = {
