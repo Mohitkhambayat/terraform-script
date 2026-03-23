@@ -1,7 +1,7 @@
-output "vpc_id" {
+variable "vpc_id" {
   type = String
 }
 
-output "subnet_cidr" {
+variable "subnet_cidr" {
   type = String
 }
