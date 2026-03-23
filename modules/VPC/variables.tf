@@ -1,3 +1,3 @@
 variable "vpc_id" {
-  type = String
+  type = string
 }
