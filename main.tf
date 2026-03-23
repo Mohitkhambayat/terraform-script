@@ -1,10 +1,10 @@
 module "vpc" {
-  source = "./modules/vpc"
+  source = "./modules/VPC"
   cidr_block = "10.0.0.0/16"
 }
 
 module "subnets" {
-  source = "./modules/subnets"
+  source = "./modules/Subnets"
 
   vpc_id = module.vpc.vpc_id
 
@@ -14,12 +14,12 @@ module "subnets" {
 }
 
 module "igw" {
-  source = "./modules/igw"
+  source = "./modules/IGW"
   vpc_id = module.vpc.vpc_id
 }
 
 module "nat" {
-  source = "./modules/nat"
+  source = "./modules/NAT"
   public_subnet_id = module.subnets.public_subnet_ids[0]
 }
 
@@ -35,7 +35,7 @@ module "route_tables" {
 }
 
 module "ec2" {
-  source = "./modules/ec2"
+  source = "./modules/EC2"
 
   public_subnet_id  = module.subnets.public_subnet_ids[0]
   private_subnet_id = module.subnets.private_subnet_ids[0]
